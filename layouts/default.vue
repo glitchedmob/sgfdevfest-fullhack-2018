@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="module-content">
         <app-navigation />
-        <main>
+        <main class="main">
             <nuxt />
         </main>
         <app-footer />
