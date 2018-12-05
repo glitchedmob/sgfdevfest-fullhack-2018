@@ -1,4 +1,5 @@
 const jsonImporter = require('node-sass-json-importer');
+const cssImporter = require('node-sass-css-importer');
 
 const pkg = require('./package');
 
@@ -29,14 +30,13 @@ module.exports = {
     ** Global CSS
     */
     css: [
-        '@/assets/scss/main.scss'
+        '~/assets/scss/main.scss',
     ],
 
     /*
     ** Plugins to load before mounting the App
     */
     plugins: [
-        '~/plugins/portal-vue',
         '~/plugins/vue-parallax',
     ],
 
@@ -46,6 +46,7 @@ module.exports = {
     modules: [
         // Doc: https://github.com/nuxt-community/axios-module#usage
         '@nuxtjs/axios',
+        'portal-vue/nuxt',
     ],
     /*
     ** Axios module configuration
@@ -60,7 +61,10 @@ module.exports = {
     build: {
         loaders: {
             scss: {
-                importer: jsonImporter(),
+                importer: [
+                    cssImporter(),
+                    jsonImporter(),
+                ],
             },
         },
         /*
