@@ -1,28 +1,26 @@
 <template>
-    <no-ssr>
-        <div>
-            <slot :open="open" :close="close" name="modal-trigger"/>
+    <div>
+        <slot :open="open" :close="close" name="modal-trigger"/>
 
-            <portal v-if="portalOpen" to="modal">
-                <transition name="modal-animation" @after-leave="afterClose">
-                    <div v-show="isOpen" class="component-modal">
-                        <div class="modal-overlay">
-                            <div ref="modal-wrapper" class="modal-wrapper" @click="handleWrapperClick($event)">
-                                <div :class="modalContainerClasses" class="modal-container container">
-                                    <button class="modal-close" @click="close">
-                                        <slot name="modal-close">
-                                            &times;
-                                        </slot>
-                                    </button>
-                                    <slot :close="close" name="modal-content"/>
-                                </div>
+        <portal v-if="portalOpen" to="modal">
+            <transition name="modal-animation" @after-leave="afterClose">
+                <div v-show="isOpen" class="component-modal">
+                    <div class="modal-overlay">
+                        <div ref="modal-wrapper" class="modal-wrapper" @click="handleWrapperClick($event)">
+                            <div :class="modalContainerClasses" class="modal-container container">
+                                <button class="modal-close" @click="close">
+                                    <slot name="modal-close">
+                                        &times;
+                                    </slot>
+                                </button>
+                                <slot :close="close" name="modal-content"/>
                             </div>
                         </div>
                     </div>
-                </transition>
-            </portal>
-        </div>
-    </no-ssr>
+                </div>
+            </transition>
+        </portal>
+    </div>
 </template>
 
 <script>
