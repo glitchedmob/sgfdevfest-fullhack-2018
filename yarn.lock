@@ -7427,6 +7427,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-animate-scroll@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/vue-animate-scroll/-/vue-animate-scroll-0.1.4.tgz#30652e768079483151a1e278195a711dc7e55e3b"
+  integrity sha512-RgbgtPfTIoReP6o00jy51sw7TdxAKnk0XyMJdTxdKG2H9zem0hns1pMLFQFaA8OuPNqL3IZZQFtPtJJ5VqQjvQ==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"

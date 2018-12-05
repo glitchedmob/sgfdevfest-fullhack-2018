@@ -16,6 +16,7 @@
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
     "portal-vue": "^1.5.0",
+    "vue-animate-scroll": "^0.1.4",
     "vue-parallax-js": "^0.2.3",
     "vue-smooth-reflow": "^0.1.12"
   },

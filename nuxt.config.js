@@ -40,6 +40,7 @@ module.exports = {
     */
     plugins: [
         '~/plugins/vue-parallax',
+        '~/plugins/animate-scroll',
     ],
 
     /*
