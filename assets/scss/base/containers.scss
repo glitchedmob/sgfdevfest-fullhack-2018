@@ -1,0 +1,14 @@
+.container {
+    max-width: 1188px;
+    width: calc(100% - 8rem);
+    margin: 0 auto;
+
+    @include mq-below(x-small) {
+        width: calc(100% - 4rem);
+    }
+
+
+    @include mq-below(tiny) {
+        width: calc(100% - 2rem);
+    }
+}

@@ -1,0 +1,168 @@
+@mixin rich-text($base: 10) {
+    // In the site 1rem = 10px but in the admin 1rem = 16px
+    // Using mixins and some percentage calculations to account for that
+    $percent: 10 / $base;
+
+    h2 {
+        @include responsive-font((
+            max-size: 3.6rem * $percent,
+            min-size: 2.5rem * $percent,
+            lower-bound: breakpoint(x-small),
+            upper-bound: breakpoint(large),
+        ));
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: color(primary);
+        margin: 0 0 #{3 * $percent}rem 0;
+
+        .primary &,
+        .secondary &,
+        .tertiary & {
+            color: #FFFFFF;
+        }
+
+        &.alt,
+        .alt {
+            font-family: $alt-font;
+            color: color(tertiary);
+            text-transform: uppercase;
+
+            .light-text &,
+            .tertiary & {
+                color: #FFFFFF;
+            }
+        }
+
+        .light-text & {
+            color: #FFFFFF;
+        }
+    }
+
+    p[style="text-align: center;"] {
+        max-width: 840px;
+        margin: 0 auto;
+    }
+
+    p,
+    ul li,
+    ol li {
+        color: color(text);
+        line-height: 1.7;
+
+        @include responsive-font((
+            max-size: 1.8rem * $percent,
+            min-size: 1.5rem * $percent,
+            lower-bound: breakpoint(x-small),
+            upper-bound: breakpoint(large),
+        ));
+
+        .light-text &,
+        .secondary &,
+        .tertiary & {
+            color: #FFFFFF;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .btn {
+        margin: #{1.5 * $percent}rem 0 0 0;
+        line-height: 1.2;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid color(text);
+
+        .tertiary & {
+            border-bottom-color: color(primary);
+        }
+    }
+
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+        border: 1px solid color(text);
+        padding: #{1 * $percent}rem;
+        border-radius: 5px;
+    }
+
+    blockquote {
+        font-weight: 300;
+        margin-left: 0;
+        padding: #{.5 * $percent}rem 0 #{.5 * $percent}rem #{2 * $percent}rem;
+        border-left: 4px solid color(text);
+
+        @include responsive-font((
+            max-size: 1.8rem * $percent,
+            min-size: 1.5rem * $percent,
+            lower-bound: breakpoint(x-small),
+            upper-bound: breakpoint(large),
+        ));
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        margin-bottom: #{1.6 * $percent}rem;
+        background-color: transparent;
+        font-size: #{1.6 * $percent}rem;
+        border-collapse: collapse;
+
+        th,
+        td {
+            padding: #{1.35 * $percent}rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+
+            &:before {
+                content: '';
+                display: block;
+                min-width: 175px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+            text-align: left;
+        }
+
+        tbody + tbody {
+            border-top: 2px solid #dee2e6;
+        }
+
+        table {
+            background-color: #fff;
+        }
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
+    .highlight {
+        background-color: color(primary);
+        color: #FFFFFF;
+        font-family: $primary-font;
+        padding: #{.32 * $percent}rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+}

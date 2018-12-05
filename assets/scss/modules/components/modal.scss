@@ -1,0 +1,98 @@
+.component-modal {
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: table;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: z-index(modal-overlay);
+    }
+
+    .modal-container {
+        background-color: #FFFFFF;
+        z-index: z-index(modal-content);
+        position: relative;
+        max-width: 83vw;
+
+        &.modal-small {
+            max-width: 840px;
+        }
+
+        &.modal-embed {
+            height: 83vh;
+
+            .modal-close {
+                top: -4.5rem;
+            }
+
+            .modal-embed-wrapper {
+                height: 100%;
+                width: 100%;
+            }
+
+            iframe {
+                background: #000000;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        }
+
+    }
+
+    .modal-close {
+        position: absolute;
+        right: 1.5rem;
+        top: 3rem;
+        font-size: 3.5rem;
+        appearance: none;
+        background: transparent;
+        transition: color 250ms ease-in-out;
+        border: none;
+        color: color(warning);
+
+        @include mq-below(mid-small) {
+            top: 1.5rem;
+            right: .5rem;
+        }
+
+        &:hover,
+        &:focus {
+            color: color(warning, light);
+            cursor: pointer;
+            outline: none;
+        }
+    }
+
+    .modal-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+}
+
+.modal-animation-enter,
+.modal-animation-leave-to {
+    .modal-overlay {
+        opacity: 0;
+    }
+
+    .modal-container {
+        transform: scale(1.1);
+    }
+}
+
+.modal-animation-enter-active,
+.modal-animation-leave-active {
+    transition: all 250ms ease;
+
+    .modal-overlay {
+        transition: all 250ms ease;
+    }
+
+    .modal-container {
+        transition: all 250ms ease;
+    }
+}
