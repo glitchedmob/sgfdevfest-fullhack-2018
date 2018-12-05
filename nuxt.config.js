@@ -4,7 +4,7 @@ const cssImporter = require('node-sass-css-importer');
 const pkg = require('./package');
 
 module.exports = {
-    mode: 'universal',
+    mode: 'spa',
 
     /*
     ** Headers of the page
@@ -17,7 +17,9 @@ module.exports = {
             { hid: 'description', name: 'description', content: pkg.description }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'stylesheet',href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,700' },
+            { rel: 'stylesheet',href: 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' },
         ]
     },
 
@@ -47,6 +49,7 @@ module.exports = {
         // Doc: https://github.com/nuxt-community/axios-module#usage
         '@nuxtjs/axios',
         'portal-vue/nuxt',
+        ['nuxt-sass-resources-loader', '~/assets/scss/utils/_all.scss'],
     ],
     /*
     ** Axios module configuration
@@ -62,7 +65,6 @@ module.exports = {
         loaders: {
             scss: {
                 importer: [
-                    cssImporter(),
                     jsonImporter(),
                 ],
             },

@@ -1,13 +1,11 @@
 <template>
     <div>
-        <!--<app-navigation />-->
+        <app-navigation />
         <main>
             <nuxt />
         </main>
-        <!--<app-footer />-->
-        <!--<no-ssr>-->
-            <!--<portal-target name="modal"/>-->
-        <!--</no-ssr>-->
+        <app-footer />
+        <portal-target name="modal"/>
     </div>
 </template>
 
@@ -23,5 +21,5 @@ export default {
 }
 </script>
 
-<!--<style lang="scss">-->
-<!--</style>-->
+<style lang="scss">
+</style>

@@ -1,81 +1,74 @@
-@mixin buttons($base: 10) {
-    // In the site 1rem = 10px but in the admin 1rem = 16px
-    // Using mixins and some percentage calculations to account for that
-    $percent: 10 / $base;
+.btn {
+    appearance: none;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: color 250ms ease-in-out, background 250ms ease-in-out, border 250ms ease-in-out;
+    background: transparent;
+    padding: 1.5rem 2.5rem;
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    border: 3px solid transparent;
+    margin: 0;
+    height: auto;
+    white-space: nowrap;
 
-    .btn {
-        appearance: none;
-        display: inline-block;
-        text-decoration: none;
-        cursor: pointer;
-        text-align: center;
-        transition: color 250ms ease-in-out, background 250ms ease-in-out, border 250ms ease-in-out;
-        background: transparent;
-        padding: #{1.5 * $percent}rem #{2.5 * $percent}rem;
-        font-family: $primary-font;
-        font-weight: 900;
-        font-size: #{1.4 * $percent}rem;
-        text-transform: uppercase;
-        border-radius: #{2 * $percent}rem;
-        border: 3px solid transparent;
-        margin: 0;
-        height: auto;
-        white-space: nowrap;
+    &.btn-wide {
+        padding: 1.5rem 4rem;
+    }
 
-        &.btn-wide {
-            padding: #{1.5 * $percent}rem #{4 * $percent}rem;
+    &.btn-primary {
+        color: #FFFFFF;
+        background-color: color(primary);
+        border-color: color(primary);
+
+        &.btn-outline {
+            background-color: #FFFFFF;
+            color: color(primary);
         }
 
-        &.btn-primary {
-            color: #FFFFFF;
-            background-color: color(primary);
-            border-color: color(primary);
-
-            &.btn-outline {
-                background-color: #FFFFFF;
-                color: color(primary);
-            }
-
-            &:hover,
-            &:focus {
-                &:not(.disabled) {
-                    color: #FFFFFF;
-                    background-color: color(primary, light);
-                    border-color: color(primary, light);
-                }
-            }
-        }
-
-        &.btn-icon {
-            position: relative;
-            padding: 0;
-            height: #{4.5 * $percent}rem;
-            width: #{4.5 * $percent}rem;
-            background-color: color(primary);
-            border-radius: #{4.5 * $percent}rem;
-
-            i {
-                position: absolute;
-                top: 56%;
-                left: 54%;
-                transform: translate(-50%, -50%);
+        &:hover,
+        &:focus {
+            &:not(.disabled) {
+                color: #FFFFFF;
+                background-color: color(primary, light);
+                border-color: color(primary, light);
             }
         }
     }
 
-    .button-group {
-        .btn {
-            margin: 0 #{1.5 * $percent}rem #{1.5 * $percent}rem 0;
+    &.btn-icon {
+        position: relative;
+        padding: 0;
+        height: 4.5rem;
+        width: 4.5rem;
+        background-color: color(primary);
+        border-radius: 4.5rem;
 
-            @include mq-below(mid-small) {
-                display: block;
-                margin: 0 auto #{1.5 * $percent}rem auto;
-                max-width: 30rem;
-            }
+        i {
+            position: absolute;
+            top: 56%;
+            left: 54%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
 
-            &:last-child {
-                margin: 0 auto;
-            }
+.btn-group {
+    .btn {
+        margin: 0 1.5rem 1.5rem 0;
+
+        @include mq-below(mid-small) {
+            display: block;
+            margin: 0 auto 1.5rem auto;
+            max-width: 30rem;
+        }
+
+        &:last-child {
+            margin: 0 auto;
         }
     }
 }
