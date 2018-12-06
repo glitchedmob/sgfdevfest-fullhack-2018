@@ -6,15 +6,16 @@
         width: 100vw;
         height: 100vh;
         display: table;
-        background-color: rgba(0, 0, 0, .5);
+        background: linear-gradient(180deg, color(tertiary,dark) 0%, color(tertiary, mid-dark) 100%);
         z-index: z-index(modal-overlay);
     }
 
     .modal-container {
-        background-color: #FFFFFF;
+        background-color: transparent;
         z-index: z-index(modal-content);
         position: relative;
         max-width: 83vw;
+        overflow-y: auto;
 
         &.modal-small {
             max-width: 840px;
@@ -22,6 +23,7 @@
 
         &.modal-embed {
             height: 83vh;
+
 
             .modal-embed-wrapper {
                 height: 100%;
@@ -38,20 +40,39 @@
 
     }
 
-    .modal-close {
+    .modal-nav {
         position: absolute;
-        right: 0;
-        top: -4.5rem;
-        font-size: 3.5rem;
+        //right: 0;
+        padding: 0 1rem;
+        left: 0;
+        top: 1rem;
+        width: 100%;
+        font-size: 1.6rem;
         appearance: none;
         background: transparent;
-        transition: color 250ms ease-in-out;
         border: none;
-        color: color(warning);
-        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            max-width: 15rem;
+        }
+
+        .modal-close {
+            transition: color 250ms ease-in-out;
+            color: color(tertiary);
+            position: relative;
+            top: -1rem;
+        }
+
+        .modal-x {
+            font-size: 6rem;
+            position: relative;
+            top: 1.75rem;
+        }
 
         @include mq-below(mid-small) {
-            top: 1.5rem;
             right: .5rem;
         }
 

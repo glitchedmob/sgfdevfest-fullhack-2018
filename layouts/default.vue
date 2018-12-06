@@ -1,23 +1,14 @@
 <template>
     <div class="module-content">
-        <app-navigation />
         <main class="main">
             <nuxt />
         </main>
-        <app-footer />
         <portal-target name="modal"/>
     </div>
 </template>
 
 <script>
-import AppNavigation from '~/components/AppNavigation.vue';
-import AppFooter from '~/components/AppFooter.vue';
-
 export default {
-    components: {
-        AppNavigation,
-        AppFooter,
-    }
 }
 </script>
 

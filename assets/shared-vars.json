@@ -1,19 +1,22 @@
 {
     "colors": {
         "primary": {
-            "base": "#2BB7EF"
+            "light": "#DAA6CF",
+            "base": "#F87678"
         },
         "secondary": {
-            "base": "#0064AE"
+            "base": "#2B439F"
         },
         "tertiary": {
-            "base": "#001F47"
+            "base": "#8679F2",
+            "mid-dark": "#1F1B51",
+            "dark": "#15132C"
         },
         "grey": {
             "base": "grey"
         },
         "text": {
-            "base": "#4A4A4A"
+            "base": "#D5FFC7"
         },
         "warning": {
             "base": "#E2284E"
@@ -22,6 +25,7 @@
     "z-index": {
         "modal-content": 110,
         "modal-overlay": 100,
+        "image-square": 50,
         "default": 0
     },
     "breakpoints": {

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="41px" viewBox="0 0 26 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>location Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440-E:-Next-Event" transform="translate(-397.000000, -809.000000)" fill="#D5FFC7" fill-rule="nonzero">
+            <g id="Content" transform="translate(371.000000, 173.000000)">
+                <g id="location-Icon" transform="translate(26.000000, 636.000000)">
+                    <path d="M13,0 C5.8188,0 0,5.71538462 0,12.7948718 C0,25.0358974 13,41 13,41 C13,41 26,25.0333333 26,12.7948718 C26,5.71794872 20.1812,5.69345141e-15 13,0 Z M13,19.874359 C9.1208,19.874359 5.98,16.774359 5.98,12.9512821 C5.98,9.12820513 9.1208,6.02820513 13,6.02820513 C16.874,6.02820513 20.0174,9.12820513 20.0174,12.9512821 C20.0174,16.774359 16.874,19.874359 13,19.874359 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

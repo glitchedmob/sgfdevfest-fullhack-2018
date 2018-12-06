@@ -7,12 +7,15 @@
                 <div v-show="isOpen" class="component-modal">
                     <div class="modal-overlay">
                         <div ref="modal-wrapper" class="modal-wrapper" @click="handleWrapperClick($event)">
-                            <div :class="modalContainerClasses" class="modal-container container">
+                            <div class="modal-nav">
+                                <img src="~/assets/images/logo.svg" alt="">
                                 <button class="modal-close" @click="close">
                                     <slot name="modal-close">
-                                        &times;
+                                        Close <span class="modal-x">&times;</span>
                                     </slot>
                                 </button>
+                            </div>
+                            <div :class="modalContainerClasses" class="modal-container container">
                                 <slot :close="close" name="modal-content"/>
                             </div>
                         </div>

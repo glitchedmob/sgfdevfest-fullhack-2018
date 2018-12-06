@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="107px" viewBox="0 0 96 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 19</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F87678" offset="0%"></stop>
+            <stop stop-color="#2B439F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440-Home-Interactive" transform="translate(0.000000, -860.000000)" fill="url(#linearGradient-1)">
+            <g id="V-photo-Copy" transform="translate(0.000000, 768.000000)">
+                <polygon id="Fill-19" transform="translate(48.000000, 145.500000) rotate(-90.000000) translate(-48.000000, -145.500000) " points="48.2756595 151.012387 29.8946826 97.5 -5.5 97.5 32.8718054 193.5 63.1392209 193.5 101.5 97.5 66.6456101 97.5"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
